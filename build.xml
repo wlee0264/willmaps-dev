@@ -14,6 +14,6 @@
   </target>
   <target name="deploy-to-shareddev">
     <sf:deploy username="${sf.username.shareddev}" password="${sf.password.shareddev}" serverurl="${sf.serverurl.shareddev}" 
-      deployRoot="src" checkOnly="true" maxPoll="1000" />
+      deployRoot="src" maxPoll="1000" />
   </target>
 </project>
