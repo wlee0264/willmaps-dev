@@ -1,0 +1,14 @@
+<project name="project migrations" basedir="." xmlns:sf="antlib:com.salesforce">
+	<property file="../build.properties"/>
+  <property environment="env"/>
+  <property name="package" value="package.xml"/>
+  <property name="destructive-package-folder" value="destructive"/>
+  <property name="migration-folder" value="migration"/>
+  <tstamp> 
+    <format property="TODAY" pattern="yyyy-MM-dd HH:mm" locale="en"/>  
+  </tstamp> 
+  <target name="deploy-to-shareddev">
+    <sf:deploy username="${sf.username.shareddev}" password="${sf.password.shareddev}" serverurl="${sf.serverurl.shareddev}" 
+      deployRoot="src" checkOnly="true" maxPoll="1000" />
+  </target>
+</project>
