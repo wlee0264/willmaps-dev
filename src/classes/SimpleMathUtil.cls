@@ -1,4 +1,5 @@
 public with sharing class SimpleMathUtil {
+	/* Adding a comment **/
 	public static Decimal add(Decimal x, Decimal y) {
 		return x + y;
 	}
