@@ -8,6 +8,13 @@
     <format property="TODAY" pattern="yyyy-MM-dd HH:mm" locale="en"/>  
   </tstamp> 
 
+  <target name="retrieve-dev1">
+    <delete dir="src"/>
+    <mkdir dir="src"/>
+    <sf:retrieve username="${sf.username.dev1}" password="${sf.password.dev1}" 
+      serverurl="${sf.serverurl.dev1}" retrieveTarget="src" unpackaged="${package}"/>
+  </target>
+
   <target name="deploy-to-dev2">
     <sf:deploy username="${sf.username.dev2}" password="${sf.password.dev2}" serverurl="${sf.serverurl.dev2}" 
       deployRoot="src" maxPoll="1000" />
